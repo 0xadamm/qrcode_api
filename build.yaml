@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qrcode-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: qrcode-app
+  template:
+    metadata:
+      labels:
+        app: qrcode-app
+    spec:
+      containers:
+        - name: qrcode-container
+          image: gcr.io/qrcode-vertxlabs/qrcode_vertxlabs:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: OPENAI_API_KEY
+              value: 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
