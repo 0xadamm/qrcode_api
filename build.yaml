@@ -17,6 +17,3 @@ spec:
           image: gcr.io/qrcode-vertxlabs/qrcode_vertxlabs:latest
           ports:
             - containerPort: 8080
-          env:
-            - name: OPENAI_API_KEY
-              value: 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
